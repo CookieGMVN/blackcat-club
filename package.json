@@ -1,18 +1,21 @@
 {
   "name": "blackcat-djs",
-  "version": "2.2.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "version": "2.2.3",
+  "description": "sử dụng bot discord v14 cực kỳ đơn giản với BlackCat-djs",
+  "main": "BlackCat.js",
+  "keywords": [
+    "Djsv14",
+    "Discord.js",
+    "BlackCatBot",
+    "Simply-Djs"
+  ],
+  "author": "nguyenvinh",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^18.0.6",
-    "blackcat-djs": "^2.2.0",
-    "discord.js": "^14.1.2",
-    "node-fetch": "^3.2.6"
+    "discord.js": "^14.1.2"
+  },
+  "homepage": "https://github.com/VinhBot/blackcat-djs#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
