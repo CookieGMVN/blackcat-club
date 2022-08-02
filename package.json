@@ -1,12 +1,12 @@
 {
-  "name": "blackcat-djsv14",
-  "version": "1.0.7",
+  "name": "blackcat-club",
+  "version": "1.0.3",
   "description": "sử dụng bot discord v14 cực kỳ đơn giản với BlackCat-djs",
   "main": "BlackCat.js",
   "keywords": [
-    "Djsv14",
-    "Discord.js",
-    "BlackCatBot",
+    "djs-v14",
+    "discord.js",
+    "BlackCat-Bot",
     "Simply-Djs"
   ],
   "author": "nguyenvinh",

@@ -1,7 +1,16 @@
 module.exports = {
+  // Client bot
+  Client_BlackCat: require("./Modules/functions/Client"),
+  // embedpages button 
   embedPages: require("./Modules/functions/embedPages"),
-  blackcatfiles: require("./Modules/Commands/path"),
+  // path 
+  files_name: require("./Modules/Commands/path"),
+  // util
   util: require("./Modules/support_files/util"),
-  corona: require("./Modules/Commands/corona"),
-  verision: require("./package.json").verision
+  // table
+  ascii: require("./Modules/Modules/cmdlog"),
+  // version package
+  version: require("./package.json").version,
+  // discord.js
+  Discord: require("discord.js")
 }; 
