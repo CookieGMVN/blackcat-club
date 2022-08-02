@@ -1,23 +1,9 @@
 const { GatewayIntentBits, Partials, Collection, EmbedBuilder,  ButtonBuilder, ActionRowBuilder, SelectMenuBuilder } = require("discord.js");
-module.exports = {
-  // await message
-  wait: function(ms) {
-    let start = new Date().getTime();
-    let end = start;
-    while (end < start + ms) {
-      end = new Date().getTime();
-    };
-  },
-  ////////////////////
-  num: function(a, b) {
-    const math = a + b;
-    return math;
-  },
-  ////////////////////
-  /***
+module.exports = embedPages;
+/***
    * Buttons Embed Pages
-  ***/
-  embedPages: async function(client, message, pages, style = {}) {
+***/
+async function embedPages(client, message, pages, style = {}) {
   	style.firstEmoji ||= '⏪'
 	  style.forwardEmoji ||= '▶️'
 	  style.backEmoji ||= '◀️'
@@ -165,8 +151,4 @@ module.exports = {
 	  } catch (err) {
 		  console.log(`embedPages | lỗi: ${err.stack}`)
 	  }
-   },
-/***
-  **
-***/
 };

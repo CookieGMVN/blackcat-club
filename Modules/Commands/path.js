@@ -1,7 +1,7 @@
 'use strict';
 
 var isWindows = process.platform === 'win32';
-var util = require('./util');
+var util = require('../support_files/util');
 
 function normalizeArray(parts, allowAboveRoot) {
   var res = [];

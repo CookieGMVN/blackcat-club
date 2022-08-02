@@ -8,6 +8,7 @@ let embed1 = new EmbedBuilder().setDescription(...)
 let embed2 = new EmbedBuilder().setDescription(...)
 run: .... {
   ///////// code pages
+  const pages = [embed1, embed2];
   embedPages(client, message, pages, {
           firstEmoji: "⏪",
           backEmoji: "◀️",
