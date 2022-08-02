@@ -28,9 +28,12 @@ client.on("messageCreate", async (message) => {
 
 client.login("token here");
 ```
-*note:* => 
+*note: => blackcat-club bao gồm:*
+`sử dụng các event như các module thông thường`
 `Discord = discord.js`
-`blackcatfiles = path`
+`Disscord_voice = @discordjs/voice`
+`files_name = path`
+
 
 # Nút Buttons v14
 ```js
