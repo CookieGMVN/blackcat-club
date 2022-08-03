@@ -1,8 +1,5 @@
 const { GatewayIntentBits, Partials } = require("discord.js");
 module.exports = {
-  /****
-  **  Client Bot 
-  ****/
   Client_BlackCat: function() {
       return {
          restTimeOffset: 0,  
@@ -26,6 +23,15 @@ module.exports = {
          ]
      };
   }, 
+  /*
+   * GAME
+   */
+  Game: {
+    SnakeGame: require("./Modules/Game/snake"),
+    ConnectFour: require("./Modules/Game/connect4"),
+  },
+  /////
+  
   embedPages: require("./Modules/functions/embedPages"),
   ascii: require("./Modules/Modules/cmdlog"),
   version: require("./package.json").version,
@@ -38,16 +44,10 @@ module.exports = {
      table.addRow("name:", `${name}`)
      table.addRow("version:", `v${version}`)
      return table.toString();
-   },
-  /* 
-   *   PACKAGE 
-   */
-  files_name: require("path"),
-  fecth: require("node-fetch"),
-  Discord: require("discord.js"),
-  DjsVoice: require("@discordjs/voice"), 
-  /**
-   ** Colors 
-   **/
+  },
   colors: require("colors"),
+  files_name: require("path"),
+  fetch: require("node-fetch"),
+  Discord: require("discord.js"),
+  DjsVoice: require("@discordjs/voice"),
 };

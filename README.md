@@ -15,7 +15,7 @@ npm i blackcat-music
  * có ví dụ trong package
  */
 ```
-# Các yếu tố phụ thuộc:
+# Các phụ thuộc:
 `Discord = discord.js`
 ```js
 const { Discord: { Client, EmbedBuilder, /* Vân vân ...*/ }} = require("blackcat-club"); // discord.js
@@ -24,38 +24,7 @@ const { Discord: { Client, EmbedBuilder, /* Vân vân ...*/ }} = require("blackc
 ```js
 const { DjsVoice: { AudioPlayerStatus, joinVoiceChannel, createAudioResource, /* vân vân...*/}} = require("blackcat-club"); // @discordjs/voice
 ```
-`files_name = path`
-```js
-const { files_name: { parse, /*Vân vân...*/}} = require("blackcat-club"); // path
-// ví dụ: 
-module.exports = {
-    name: parse(__filename).name,
-    run: async() => {
-      // vân vân...
-    },
-};
-```
 # <p align="center">Package Run</p>
-# Thông tin package
-```js
-const { infoBLC } = require("blackcat-club");
-console.log(`${infoBLC()}`.magenta);
-```
-## màu chữ ("colors")
-```js
-console.log("màu console".red)
-```
-  - black
-  - red
-  -  green
-  - yellow
-  - blue
-  - magenta
-  - cyan
-  - white
-  - gray
-  - grey
-
 ```js
 const { Client_BlackCat, version, infoBLC, Discord: { Client, Collection, /*....*/ }} = require("blackcat-club");
 const client = new Client(Client_BlackCat());
@@ -86,6 +55,50 @@ client.on("messageCreate", async (message) => {
   
 });
 client.login(config.token);
+```
+```js
+console.log("màu console".red)
+```
+ • black, • red, • green, • yellow
+ • blue, • magenta, • cyan, • white
+ • gray, • grey
+# <p align="center">Game Commands</p>
+# ConnectFour
+```js
+const { Game: { ConnectFour }} = require("blackcat-club");
+
+const game = new ConnectFour({
+      message: message, // message = message
+      player1: '🔴', // người chơi 1
+      player2: '🔞', // người chơi 2 
+})
+game.start()
+```
+# SnakeGame
+```js
+const { Game: { SnakeGame }} = require("blackcat-club");
+
+const snake =  new SnakeGame({
+         message: message,
+         slash_command: false,
+         embed: {
+           title: 'Snake',
+           color: "#FFFB00",
+           footer: "blackcat",
+           overTitle: 'end game',
+         },
+         snake: { 
+           head: '😋', // đầu rắn
+           body: '🟦', // thân rắn
+           tail: '🔹', // đuôi rắn
+           over: '💀' // chết
+         },
+         emojis: { board: '⬛',  food: '🍔', up: '🔼',  right: '▶️', down: '🔽', left: '◀️', },
+         foods: ['🍎', '🍇', '🍊', "🍕", "🍔", "🥪", "🥙", "🥗", "🥐", "🍿", "🥓", "🌯", "🍗", "🥟"], // thức ăn 
+         stopButton: `Dừng Chơi`,
+         othersMessage: `Bạn không được phép sử dụng các nút cho tin nhắn này`,
+})
+snake.startGame();
 ```
 # <p align="center">Commands</p>
 
