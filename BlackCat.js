@@ -37,5 +37,5 @@ module.exports = {
   files_name: require("path"),
   fecth: require("node-fetch"),
   Discord: require("discord.js"),
-  Discord_Voice: require("@discordjs/voice"), 
+  DjsVoice: require("@discordjs/voice"), 
 }; 
