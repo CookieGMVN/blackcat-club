@@ -1,8 +1,9 @@
-const { GatewayIntentBits, Partials, Collection, EmbedBuilder,  ButtonBuilder, ActionRowBuilder, SelectMenuBuilder } = require("discord.js");
+const { GatewayIntentBits, Partials } = require("discord.js");
+
 module.exports = {
-   /****
-      **  Client Bot 
-   ****/
+  /****
+  **  Client Bot 
+  ****/
   Client_BlackCat: function() {
       return {
          restTimeOffset: 0,  
@@ -25,21 +26,16 @@ module.exports = {
             GatewayIntentBits.DirectMessages, GatewayIntentBits.DirectMessageReactions, GatewayIntentBits.DirectMessageTyping, GatewayIntentBits.MessageContent, 
          ]
      };
-  },
-  /***
-     *
-  ***/
-  // embedpages button 
+  }, 
   embedPages: require("./Modules/functions/embedPages"),
-  // table
   ascii: require("./Modules/Modules/cmdlog"),
-  // version package
   version: require("./package.json").version,
   /* 
    *   PACKAGE 
    */
   colors: require("colors"),
   files_name: require("path"),
+  fecth: require("node-fetch"),
   Discord: require("discord.js"),
   Discord_Voice: require("@discordjs/voice"), 
 }; 

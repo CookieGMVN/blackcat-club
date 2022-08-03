@@ -1,21 +1,63 @@
 # <p align="center">BlackCat-Club</p>
-
-`sử dụng bot discord v14 cực kỳ đơn giản với BlackCat-djs dành cho những bạn mới làm quen với code bot discord`
+`sử dụng bot discord v14 cực kỳ đơn giản với BlackCat-club dành cho những bạn mới làm quen với code bot discord`
 
 <p align="center">
 	<a href="https://www.facebook.com/BlackCat.2k3">
-	<img src="https://1.bp.blogspot.com/-hN0NCoAmEDY/X8z1OcRjXmI/AAAAAAAAlc0/hHqbHzqOPhIABiVomzpYacPeEufV816QQCNcBGAsYHQ/w350-h265-p-k-no-nu/hinh-nen-may-cuc-dep.jpg" width = "200" alt="TNT">
+	<img src="https://statics.voz.tech/data/avatars/o/1093/1093136.jpg?1584167722" width = "200" alt="TNT">
 	</a>
 </p>
 
+# <p align="center">BlackCat-Music</p>
+```css
+npm i blackcat-music
+/*
+ * hệ thống âm nhạc đỉnh cao dễ sử dụng
+ * có ví dụ trong package
+ */
+```
+# Các yếu tố phụ thuộc:
+`Discord = discord.js`
+```js
+const { Discord: { Client, EmbedBuilder, /* Vân vân ...*/ }} = require("blackcat-club"); // discord.js
+```
+`DjsVoice = @discordjs/voice`
+```js
+const { DjsVoice: { AudioPlayerStatus, joinVoiceChannel, createAudioResource, /* vân vân...*/}} = require("blackcat-club"); // @discordjs/voice
+```
+`files_name = path`
+```js
+const { files_name: { parse, /*Vân vân...*/}} = require("blackcat-club"); // path
+// ví dụ: 
+module.exports = {
+    name: parse(__filename).name,
+    run: async() => {
+      // vân vân...
+    },
+};
+```
 # <p align="center">Package Run</p>
+## màu chữ ("colors")
+```js
+console.log("màu console".red)
+```
+  - black
+  - red
+  -  green
+  - yellow
+  - blue
+  - magenta
+  - cyan
+  - white
+  - gray
+  - grey
 
 ```js
-const { Client_BlackCat, Discord: { Client, Collection, /*....*/ }} = require("blackcat-djsv14");
+const { Client_BlackCat, version, Discord: { Client, Collection, /*....*/ }} = require("blackcat-djsv14");
 const client = new Client(Client_BlackCat());
 // xem bot đã hoạt động hay là chưa 
 client.on("ready", () => {
-    console.log(client.user.username + " is ready 😊");
+    console.log(client.user.username + " is ready 😊".blue);
+    console.log(`blackcat-club phiên bản: ${version}`.red);
 });
 
 // prefix: tiền tố để gọi bot
@@ -34,26 +76,18 @@ client.on("messageCreate", async (message) => {
      // code
   };
 });
-
 client.login("token here");
 ```
-*note:
-=> blackcat-club bao gồm:*
-`sử dụng các event như các module thông thường`
-`Discord = discord.js`
-`Disscord_voice = @discordjs/voice`
-`files_name = path`
+# <p align="center">Commands</p>
 
-# Nút Buttons v14
+# Nút Buttons
 ```js
-npm:
 const { embedPages, Discord: { EmbedBuilder }} = require("blackcat-club");
 let embed1 = new EmbedBuilder().setDescription(...)
 let embed2 = new EmbedBuilder().setDescription(...)
-run: .... {
-  ///////// code pages
-  const pages = [embed1, embed2];
-  embedPages(client, message, pages, {
+
+const pages = [embed1, embed2];
+embedPages(client, message, pages, {
           firstEmoji: "⏪",
           backEmoji: "◀️",
           delEmoji: "🗑",
@@ -64,7 +98,6 @@ run: .... {
           skipcolor: "Primary",
           skipBtn: true,
           delBtn: true
-  });
-  ///// end code
-};
+});
 ```
+# <p align="center">Hãy thiết kế bots theo ý thích của bạn</p>
