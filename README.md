@@ -8,7 +8,7 @@
 </p>
 
 # <p align="center">BlackCat-Music</p>
-```css
+```css 
 npm i blackcat-music
 /*
  * hệ thống âm nhạc đỉnh cao dễ sử dụng
@@ -16,17 +16,18 @@ npm i blackcat-music
  */
 ```
 # Các phụ thuộc:
-`Discord = discord.js`
+
+- `Discord = discord.js`
 ```js
 const { Discord: { Client, EmbedBuilder, /* Vân vân ...*/ }} = require("blackcat-club"); // discord.js
 ```
-`DjsVoice = @discordjs/voice`
+- `DjsVoice = @discordjs/voice`
 ```js
 const { DjsVoice: { AudioPlayerStatus, joinVoiceChannel, createAudioResource, /* vân vân...*/}} = require("blackcat-club"); // @discordjs/voice
 ```
 
-- [Các Game Cmds](https://github.com/VinhBot/blackcat-club/blob/main/Modules/Game/README.md)
-- [Các Simply Cmds](https://replit.com/@vinhdocle2k3/blackcat-club#Modules/functions/README.md)
+- [Các Game Cmds](https://github.com/VinhBot/blackcat-club/blob/main/Modules/Game/README.md) 🎮
+- [Các Simply Cmds](https://github.com/VinhBot/blackcat-club/blob/main/Modules/Commands/README.md) 🔮
 
 # <p align="center">Package Run</p>
 ```js
@@ -60,10 +61,18 @@ client.on("messageCreate", async (message) => {
 });
 client.login(config.token);
 ```
+# màu console
+![Demo](https://raw.githubusercontent.com/VinhBot/blackcat-club/main/Modules/Preview/demoColors.jpg)
 ```js
-console.log("màu console".red)
+console.log(`black`.black)
+console.log(`red`.red)
+console.log(`green`.green)
+console.log(`yellow`.yellow)
+console.log(`blue`.blue)
+console.log(`magenta`.magenta)
+console.log(`cyan`.cyan)
+console.log(`white`.white)
+console.log(`gray`.gray)
+console.log(`grey`.grey)
 ```
- • black, • red, • green, • yellow
- • blue, • magenta, • cyan, • white
- • gray, • grey
 # <p align="center">Hãy thiết kế bots theo ý thích của bạn</p>
