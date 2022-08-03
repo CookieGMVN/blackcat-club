@@ -36,6 +36,11 @@ module.exports = {
 };
 ```
 # <p align="center">Package Run</p>
+# Thông tin package
+```js
+const { infoBLC } = require("blackcat-club");
+console.log(`${infoBLC()}`.magenta);
+```
 ## màu chữ ("colors")
 ```js
 console.log("màu console".red)
@@ -52,21 +57,24 @@ console.log("màu console".red)
   - grey
 
 ```js
-const { Client_BlackCat, version, Discord: { Client, Collection, /*....*/ }} = require("blackcat-club");
+const { Client_BlackCat, version, infoBLC, Discord: { Client, Collection, /*....*/ }} = require("blackcat-club");
 const client = new Client(Client_BlackCat());
 // xem bot đã hoạt động hay là chưa 
 client.on("ready", () => {
     console.log(client.user.username + " is ready 😊".blue);
-    console.log(`blackcat-club phiên bản: ${version}`.red);
+    console.log(`${infoBLC()}`.red);
 });
 
 // prefix: tiền tố để gọi bot
-const prefix = " prefix của bạn "
+const config = {
+   "prefix": "prefix của bạn",
+   "token": "token của bạn"
+};
 // messageCreate
 client.on("messageCreate", async (message) => {
   if (message.author.bot || !message.inGuild()) return;
-	if (!message.content.startsWith(prefix)) return;
-	const args = message.content.slice(prefix.length).trim().split(/ +/g);
+	if (!message.content.startsWith(config.prefix)) return;
+	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 	const command = args.shift();
 
   if (command === 'ping') {
@@ -75,8 +83,9 @@ client.on("messageCreate", async (message) => {
   if (command === 'name') {
      // code
   };
+  
 });
-client.login("token here");
+client.login(config.token);
 ```
 # <p align="center">Commands</p>
 

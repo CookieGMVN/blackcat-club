@@ -1,5 +1,4 @@
 const { GatewayIntentBits, Partials } = require("discord.js");
-
 module.exports = {
   /****
   **  Client Bot 
@@ -30,12 +29,25 @@ module.exports = {
   embedPages: require("./Modules/functions/embedPages"),
   ascii: require("./Modules/Modules/cmdlog"),
   version: require("./package.json").version,
+  infoBLC: function() {
+     const { version, author, name } = require("./package.json");
+     const ascii = require("./Modules/Modules/cmdlog");
+     var table = new ascii("BlackCat-Club");
+     table.setHeading("Tên Mục", "Thông Tin");
+     table.addRow("author:", `${author}`)
+     table.addRow("name:", `${name}`)
+     table.addRow("version:", `v${version}`)
+     return table.toString();
+   },
   /* 
    *   PACKAGE 
    */
-  colors: require("colors"),
   files_name: require("path"),
   fecth: require("node-fetch"),
   Discord: require("discord.js"),
   DjsVoice: require("@discordjs/voice"), 
-}; 
+  /**
+   ** Colors 
+   **/
+  colors: require("colors"),
+};
