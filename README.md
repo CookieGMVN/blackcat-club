@@ -24,6 +24,10 @@ const { Discord: { Client, EmbedBuilder, /* Vân vân ...*/ }} = require("blackc
 ```js
 const { DjsVoice: { AudioPlayerStatus, joinVoiceChannel, createAudioResource, /* vân vân...*/}} = require("blackcat-club"); // @discordjs/voice
 ```
+
+- [Các Game Cmds](https://github.com/VinhBot/blackcat-club/blob/main/Modules/Game/README.md)
+- [Các Simply Cmds](https://replit.com/@vinhdocle2k3/blackcat-club#Modules/functions/README.md)
+
 # <p align="center">Package Run</p>
 ```js
 const { Client_BlackCat, version, infoBLC, Discord: { Client, Collection, /*....*/ }} = require("blackcat-club");
@@ -62,64 +66,4 @@ console.log("màu console".red)
  • black, • red, • green, • yellow
  • blue, • magenta, • cyan, • white
  • gray, • grey
-# <p align="center">Game Commands</p>
-# ConnectFour
-```js
-const { Game: { ConnectFour }} = require("blackcat-club");
-
-const game = new ConnectFour({
-      message: message, // message = message
-      player1: '🔴', // người chơi 1
-      player2: '🔞', // người chơi 2 
-})
-game.start()
-```
-# SnakeGame
-```js
-const { Game: { SnakeGame }} = require("blackcat-club");
-
-const snake =  new SnakeGame({
-         message: message,
-         slash_command: false,
-         embed: {
-           title: 'Snake',
-           color: "#FFFB00",
-           footer: "blackcat",
-           overTitle: 'end game',
-         },
-         snake: { 
-           head: '😋', // đầu rắn
-           body: '🟦', // thân rắn
-           tail: '🔹', // đuôi rắn
-           over: '💀' // chết
-         },
-         emojis: { board: '⬛',  food: '🍔', up: '🔼',  right: '▶️', down: '🔽', left: '◀️', },
-         foods: ['🍎', '🍇', '🍊', "🍕", "🍔", "🥪", "🥙", "🥗", "🥐", "🍿", "🥓", "🌯", "🍗", "🥟"], // thức ăn 
-         stopButton: `Dừng Chơi`,
-         othersMessage: `Bạn không được phép sử dụng các nút cho tin nhắn này`,
-})
-snake.startGame();
-```
-# <p align="center">Commands</p>
-
-# Nút Buttons
-```js
-const { embedPages, Discord: { EmbedBuilder }} = require("blackcat-club");
-let embed1 = new EmbedBuilder().setDescription(...)
-let embed2 = new EmbedBuilder().setDescription(...)
-
-const pages = [embed1, embed2];
-embedPages(client, message, pages, {
-          firstEmoji: "⏪",
-          backEmoji: "◀️",
-          delEmoji: "🗑",
-          forwardEmoji: "▶️",
-          lastEmoji: "⏩",
-          btncolor: "Success",
-          delcolor: "Danger",
-          skipcolor: "Primary",
-          skipBtn: true,
-          delBtn: true
-});
-```
 # <p align="center">Hãy thiết kế bots theo ý thích của bạn</p>

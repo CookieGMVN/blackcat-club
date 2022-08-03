@@ -1,6 +1,6 @@
 {
   "name": "blackcat-club",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "sử dụng bot discord cực kỳ đơn giản với BlackCat-club dành cho những bạn mới làm quen với code bot discord",
   "main": "BlackCat.js",
   "dependencies": {
