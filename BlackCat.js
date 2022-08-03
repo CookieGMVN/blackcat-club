@@ -32,7 +32,7 @@ module.exports = {
   },
   /////
   
-  embedPages: require("./Modules/functions/embedPages"),
+  embedPages: require("./Modules/Commands/embedPages"),
   ascii: require("./Modules/Modules/cmdlog"),
   version: require("./package.json").version,
   infoBLC: function() {
