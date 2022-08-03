@@ -1,4 +1,3 @@
-const { GatewayIntentBits, Partials, Collection, EmbedBuilder,  ButtonBuilder, ActionRowBuilder, SelectMenuBuilder } = require("discord.js");
 module.exports = embedPages;
 /***
    * Buttons Embed Pages

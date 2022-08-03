@@ -1,6 +1,15 @@
-# **BlackCat-Djsv14**
+# <p align="center">BlackCat-Club</p>
+
 `sử dụng bot discord v14 cực kỳ đơn giản với BlackCat-djs dành cho những bạn mới làm quen với code bot discord`
-# Bot Run
+
+<p align="center">
+	<a href="https://www.facebook.com/BlackCat.2k3">
+	<img src="https://1.bp.blogspot.com/-hN0NCoAmEDY/X8z1OcRjXmI/AAAAAAAAlc0/hHqbHzqOPhIABiVomzpYacPeEufV816QQCNcBGAsYHQ/w350-h265-p-k-no-nu/hinh-nen-may-cuc-dep.jpg" width = "200" alt="TNT">
+	</a>
+</p>
+
+# <p align="center">Package Run</p>
+
 ```js
 const { Client_BlackCat, Discord: { Client, Collection, /*....*/ }} = require("blackcat-djsv14");
 const client = new Client(Client_BlackCat());
@@ -28,12 +37,12 @@ client.on("messageCreate", async (message) => {
 
 client.login("token here");
 ```
-*note: => blackcat-club bao gồm:*
+*note:
+=> blackcat-club bao gồm:*
 `sử dụng các event như các module thông thường`
 `Discord = discord.js`
 `Disscord_voice = @discordjs/voice`
 `files_name = path`
-
 
 # Nút Buttons v14
 ```js
