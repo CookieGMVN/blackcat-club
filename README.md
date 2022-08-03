@@ -52,7 +52,7 @@ console.log("màu console".red)
   - grey
 
 ```js
-const { Client_BlackCat, version, Discord: { Client, Collection, /*....*/ }} = require("blackcat-djsv14");
+const { Client_BlackCat, version, Discord: { Client, Collection, /*....*/ }} = require("blackcat-club");
 const client = new Client(Client_BlackCat());
 // xem bot đã hoạt động hay là chưa 
 client.on("ready", () => {
