@@ -31,8 +31,9 @@ module.exports = {
     ConnectFour: require("./Modules/Game/connect4"),
   },
   /////
-  
-  embedPages: require("./Modules/Commands/embedPages"),
+  Commnads: {
+    embedPages: require("./Modules/Commands/embedPages"),
+  },
   ascii: require("./Modules/Modules/cmdlog"),
   version: require("./package.json").version,
   infoBLC: function() {
@@ -45,7 +46,7 @@ module.exports = {
      table.addRow("version:", `v${version}`)
      return table.toString();
   },
-  colors: require("colors"),
+  colors: require("colors"), 
   files_name: require("path"),
   fetch: require("node-fetch"),
   Discord: require("discord.js"),

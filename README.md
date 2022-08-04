@@ -10,18 +10,16 @@
 # <p align="center">BlackCat-Music</p>
 ```css 
 npm i blackcat-music
-/*
- * hệ thống âm nhạc đỉnh cao dễ sử dụng
- * có ví dụ trong package
- */
 ```
+- [hệ thống âm nhạc đỉnh cao dễ sử dụng](https://github.com/VinhBot/blackcat-music) 🎶
+
 # Các phụ thuộc:
 
-- `Discord = discord.js`
+- [`Discord = discord.js`](https://github.com/discordjs/discord.js)
 ```js
 const { Discord: { Client, EmbedBuilder, /* Vân vân ...*/ }} = require("blackcat-club"); // discord.js
 ```
-- `DjsVoice = @discordjs/voice`
+- [`DjsVoice = @discordjs/voice`](https://github.com/discordjs/discord.js)
 ```js
 const { DjsVoice: { AudioPlayerStatus, joinVoiceChannel, createAudioResource, /* vân vân...*/}} = require("blackcat-club"); // @discordjs/voice
 ```
